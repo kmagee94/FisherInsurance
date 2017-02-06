@@ -8,16 +8,25 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FisherInsurance.Controllers
 {
+    [Route("customer")]
     public class CustomerCare : Controller
     {
         // GET: /<controller>/
         public IActionResult Index()
         {
-            return View();
+            return Ok("This is the index of the CustomerCareController");
         }
-        public IActionResult Claims()
+        [Route ("claim")]
+        [Route ("fileclaim")]
+        public IActionResult NewClaim()
         {
             return Ok("Claims from Care");
         }
+        [Route ("claimstatus")]
+        public IActionResult ClaimHistory()
+        {
+            return Ok("claim status/history");
+        }
     }
+
 }
