@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FisherInsurance.Controllers
 {
-    public class HomeIns : Controller
+    public class HomeinsController : Controller
     {
         // GET: /<controller>/
         public IActionResult Index()
@@ -17,7 +17,7 @@ namespace FisherInsurance.Controllers
         }
         public IActionResult Quote()
         {
-            return Ok("reurning main page quote");
+            return Ok("returning main page quote");
         }
     }
 }
